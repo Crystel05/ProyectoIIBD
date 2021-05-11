@@ -82,3 +82,21 @@ ALTER TABLE public.store
 
 ALTER TABLE public.film_category
     OWNER TO "VIDEO";
+	
+-- Ejemplo de como son las funciones
+
+/*CREATE OR REPLACE FUNCTION public.prueba(
+	)
+    RETURNS integer
+    LANGUAGE 'plpgsql'
+	SECURITY DEFINER --****
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+AS $BODY$
+DECLARE nom varchar;
+BEGIN
+	nom := (SELECT first_name FROM actor WHERE actor_id = 1);
+	RETURN 1;
+END;
+$BODY$;
+*/
