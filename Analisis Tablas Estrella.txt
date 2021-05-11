@@ -1,0 +1,30 @@
+Tiempo(Anno, mes, dia, parteDia)
+
+all| rental.rental_date 
+
+--------------------------------------------------
+
+Item(nombre)
+
+all| film.title
+
+---------------------------------------------------
+
+Lugar(pais, provincia, ciudad)
+
+pais| country.country
+provincia| city.city ?
+ciudad| address.district ?
+
+----------------------------------------------------
+
+Sucursal(nombreSuc)
+
+all| ?
+
+---------------------------------------------------- 
+
+Ventas(unidadesVendidas, montoVendido)
+
+montoVendido| payment.amount
+unidadesVendidas |count(ID) FROM rental Where inventoryId In(SELECT inventoryId FROM inventory where filmId = x)?
