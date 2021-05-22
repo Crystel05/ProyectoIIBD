@@ -5,7 +5,7 @@ CREATE TABLE Fecha
 	anno smallint NOT NULL,
 	mes smallint NOT NULL,
 	dia smallint NOT NULL,
-	parteDia varchar NOT NULL,
+	parteDia time NOT NULL,
 	CONSTRAINT fecha_pkey PRIMARY KEY(fechaID)
 );
 

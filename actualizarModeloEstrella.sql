@@ -93,7 +93,6 @@ BEGIN
 	fecha.dia = EXTRACT(DAY FROM rental.rental_date) AND
 	fecha.partedia = (cast(rental.rental_date as time));
 	
-	
     INSERT INTO ventas(
    	peliculaid, 
    	lenguajeid, 
@@ -120,6 +119,6 @@ END;
 $BODY$;
 
 
-
+SELECT actualizarModeloEstrella()
 
 
